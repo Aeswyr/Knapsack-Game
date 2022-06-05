@@ -27,8 +27,11 @@ public class PlayerHandler : MonoBehaviour
     Vector2 velocity;
     bool grounded = false;
     void FixedUpdate()
-    {
+    {   bool lastGround = grounded;
         grounded = ground.CheckGrounded();
+        animator.SetBool("grounded", grounded);
+        if (!lastGround && grounded)
+            animator.SetTrigger("DoLand");
         velocity = rbody.velocity;
 
         if (moveUnlocked) {
@@ -56,22 +59,21 @@ public class PlayerHandler : MonoBehaviour
             return;
 
         velocity = new Vector2((sprinting ? 1.7f : 1) * input.dir * 12, rbody.velocity.y);
-        if (input.dir != 0) {
-            sprite.flipX = input.dir < 0;
-            facing = input.dir > 0 ? 1 : -1;
-        }
-
-        
+        UpdateFacing();
     }
 
     void ReadJumps() {
         if (!grounded)
             return;
         if (input.jump.pressed) {
+            
             if (!moveUnlocked)
                 Instantiate(shockwave, transform.position, Quaternion.identity);
             velocity = new Vector2((sprinting ? 1.7f : 1) * input.dir * 12, sprinting ? 35 : 50);
             CompleteAction();
+            UpdateFacing();
+            animator.SetBool("acting", true);
+            animator.SetTrigger("DoJump");
         }
     }
 
@@ -94,6 +96,12 @@ public class PlayerHandler : MonoBehaviour
         }
     }
 
+    private void UpdateFacing() {
+        if (input.dir != 0) {
+            sprite.flipX = input.dir < 0;
+            facing = input.dir > 0 ? 1 : -1;
+        }
+    }
     void ReadActions() {
 
     }
