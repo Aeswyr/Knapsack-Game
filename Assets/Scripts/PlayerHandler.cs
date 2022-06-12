@@ -10,7 +10,7 @@ public class PlayerHandler : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private GroundedCheck ground;
     [SerializeField] private GameObject shockwave;
-
+    [SerializeField] private JumpHandler jumps;
 
     // internals
     private bool moveUnlocked = true, jumpCancel = true, hopCancel = true, actionCancel = true;
@@ -69,7 +69,8 @@ public class PlayerHandler : MonoBehaviour
             
             if (!moveUnlocked)
                 Instantiate(shockwave, transform.position, Quaternion.identity);
-            velocity = new Vector2((sprinting ? 1.7f : 1) * input.dir * 12, sprinting ? 35 : 50);
+            velocity = new Vector2((sprinting ? 1.7f : 1) * input.dir * 12, rbody.velocity.y);
+            jumps.StartJump(sprinting ? 1 : 0);
             CompleteAction();
             UpdateFacing();
             animator.SetBool("acting", true);
@@ -91,6 +92,7 @@ public class PlayerHandler : MonoBehaviour
                 velocity = new Vector2(30 * input.dir, 0);
                 animator.SetTrigger("DoHop");
             }
+            animator.SetBool("attacking", false);
             BeginAction();
             sprinting = true;
         }
@@ -103,7 +105,12 @@ public class PlayerHandler : MonoBehaviour
         }
     }
     void ReadActions() {
-
+        if (input.primary.pressed || input.secondary.pressed) {
+            if (!moveUnlocked)
+                Instantiate(shockwave, transform.position, Quaternion.identity);
+            animator.SetTrigger("DoAction");
+            BeginAction();
+        }
     }
 
     void SetHopCancel() {hopCancel = true;}
@@ -114,6 +121,7 @@ public class PlayerHandler : MonoBehaviour
 
     void CompleteAction() {
         animator.SetBool("acting", false);
+        animator.SetBool("attacking", false);
         moveUnlocked = true;
         hopCancel = true;
         jumpCancel = true;
@@ -127,6 +135,16 @@ public class PlayerHandler : MonoBehaviour
         hopCancel = false;
         jumpCancel = false;
         actionCancel = false;
+    }
+
+    void BeginAttack() {
+        animator.SetBool("attacking", true);
+    }
+
+    void SetSpeed(float speed) {
+        Vector2 velocity = rbody.velocity;
+        velocity.x = facing * Mathf.Max(speed, Mathf.Abs(velocity.x));
+        rbody.velocity = velocity;
     }
 
 }

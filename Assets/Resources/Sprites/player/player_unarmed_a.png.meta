@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 585104b3cfce12e42b25603423e0f0b2
+guid: c5345e5aec9daa042a9450c311a79561
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,7 +116,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player_backhop_0
+      name: player_unarmed_a_0
       rect:
         serializedVersion: 2
         x: 0
@@ -130,14 +130,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 272833f7de27f924caa3f775b38ec1e4
-      internalID: -12694704
+      spriteID: 06d3d9f3db28ef449bc542073258a281
+      internalID: -893408093
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_backhop_1
+      name: player_unarmed_a_1
       rect:
         serializedVersion: 2
         x: 128
@@ -151,14 +151,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d97bf7d618b9583499e4f373aaf4f87c
-      internalID: 1094265639
+      spriteID: 55322fa5a44ae3d4c82139d6b0fff3c1
+      internalID: -1208011716
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_backhop_2
+      name: player_unarmed_a_2
       rect:
         serializedVersion: 2
         x: 256
@@ -172,14 +172,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37de4d7f4ca6dd848981ee8e3cd7186c
-      internalID: -1492903456
+      spriteID: 7f86488831f94a644960294e867e11a0
+      internalID: 203460308
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_backhop_3
+      name: player_unarmed_a_3
       rect:
         serializedVersion: 2
         x: 384
@@ -193,14 +193,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e70e37bf2c1b3ba4c9c1a65cce7b9e85
-      internalID: 381922756
+      spriteID: ed6e5e15ed896ce42b875795f1154e7f
+      internalID: 1853609373
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_backhop_4
+      name: player_unarmed_a_4
       rect:
         serializedVersion: 2
         x: 512
@@ -214,8 +214,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b378494356218b4b850c250faeb1130
-      internalID: 224636178
+      spriteID: e96d5a6acf35e6746acb2e645a14db80
+      internalID: 1043076001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_unarmed_a_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a426839dfd220d14ca8c27278fa2f1dc
+      internalID: -641380567
       vertices: []
       indices: 
       edges: []
@@ -231,11 +252,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      player_backhop_3: 381922756
-      player_backhop_0: -12694704
-      player_backhop_4: 224636178
-      player_backhop_1: 1094265639
-      player_backhop_2: -1492903456
+      player_unarmed_a_4: 1043076001
+      player_unarmed_a_3: 1853609373
+      player_unarmed_a_5: -641380567
+      player_unarmed_a_0: -893408093
+      player_unarmed_a_2: 203460308
+      player_unarmed_a_1: -1208011716
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

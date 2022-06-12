@@ -1,3 +1,4 @@
+#if (UnityEditor)
 using UnityEditor;
 using UnityEngine;
 
@@ -16,3 +17,4 @@ public class SpritePaletteEditor : Editor
         
     }
 }
+#endif

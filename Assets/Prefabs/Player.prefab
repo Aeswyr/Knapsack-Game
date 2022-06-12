@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1303074644108444654}
   - component: {fileID: 6489937431447599403}
+  - component: {fileID: 5446298629806227433}
   - component: {fileID: -7983433430753619220}
   - component: {fileID: 199621142315352991}
   - component: {fileID: 1226167272733611501}
@@ -55,6 +56,87 @@ MonoBehaviour:
   animator: {fileID: 1226167272733611501}
   ground: {fileID: 8978873353788298601}
   shockwave: {fileID: 7871841909544040833, guid: b8a9420808673f24baec4253df2fb6d9, type: 3}
+  jumps: {fileID: 5446298629806227433}
+--- !u!114 &5446298629806227433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3333958704109638016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d050a05c33ef364e86a6208c6eef466, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arcs:
+  - serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -6.573848
+      outSlope: -6.573848
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.018180255
+    - serializedVersion: 3
+      time: 0.14284068
+      value: 0.47936317
+      inSlope: -2.7786298
+      outSlope: -2.7786298
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.119859464
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.4
+      value: 0
+      inSlope: -0.007081683
+      outSlope: -0.007081683
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.04909891
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  - serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.6
+      inSlope: -3.3132389
+      outSlope: -3.3132389
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.12682834
+    - serializedVersion: 3
+      time: 0.12729184
+      value: 0.23662597
+      inSlope: -2.3500335
+      outSlope: -2.3500335
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.13426746
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.35014647
+      value: 0.003540039
+      inSlope: -0.007081683
+      outSlope: -0.007081683
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.04909891
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  speed: 50
+  ground: {fileID: 8978873353788298601}
+  rbody: {fileID: 199621142315352991}
 --- !u!212 &-7983433430753619220
 SpriteRenderer:
   m_ObjectHideFlags: 0
