@@ -15,7 +15,7 @@ TagManager:
   - Entity
   - Hitbox
   - Hurtbox
-  - 
+  - VelocityBuffer
   - 
   - 
   - 
@@ -41,6 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: VelocityBuffer
+    uniqueID: 4095768181
+    locked: 0
   - name: Parallax
     uniqueID: 2808512685
     locked: 0
@@ -64,4 +67,7 @@ TagManager:
     locked: 0
   - name: ShaderRender
     uniqueID: 38993161
+    locked: 0
+  - name: UI
+    uniqueID: 3425721373
     locked: 0
